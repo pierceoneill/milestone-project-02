@@ -20,7 +20,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <link rel="stylesheet" href="lib/css/dc.css">
     <link rel="stylesheet" href="lib/css/introjs.css">
-    <script src="ext_js/Face-data.js"></script>
+    <script src="ext_js/rugby-data.js"></script>
     
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="lib/js/crossfilter.js"></script>
@@ -46,22 +46,22 @@
 	<div class="collapse navbar-collapse" id="navbarResponsive">
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item">
-				<a class="nav-link"  href="#"><img src="image/rfu.png" alt="Smiley face" height="100" width="100">England</a>
+				<a class="nav-link"  href="http://www.englandrugby.com"><img src="image/rfu.png" alt="Smiley face" height="100" width="100">England</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link"  href="#"><img src="image/ffr.png" alt="Smiley face" height="100" width="100">France</a>
+				<a class="nav-link"  href="https://www.ffr.fr/"><img src="image/ffr.png" alt="Smiley face" height="100" width="100">France</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link"  href="#"><img src="image/irfu.png" alt="Smiley face" height="100" width="100">Ireland</a>
+				<a class="nav-link"  href="http://www.irishrugby.ie"><img src="image/irfu.png" alt="Smiley face" height="100" width="100">Ireland</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link"  href="#"><img src="image/fir.png" alt="Smiley face" height="100" width="100">Italy</a>
+				<a class="nav-link"  href="https://www.federugby.it"><img src="image/fir.png" alt="Smiley face" height="100" width="100">Italy</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link"  href="#"><img src="image/sru.png" alt="Smiley face" height="100" width="100">Scotland</a>
+				<a class="nav-link"  href="http://www.scottishrugby.org"><img src="image/sru.png" alt="Smiley face" height="100" width="100">Scotland</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link"  href="#"><img src="image/wru.png" alt="Smiley face" height="100" width="100">Wales</a>
+				<a class="nav-link"  href="http://www.wru.co.uk/"><img src="image/wru.png" alt="Smiley face" height="100" width="100">Wales</a>
 			</li>
 		</ul>
 	</div>
@@ -156,19 +156,19 @@
 
             <div class="row">
 
-                <!-- Top Guests Chart -->
+                <!-- Captains per Country over the past 5 seasons -->
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="chart-wrapper">
                         <div class="chart-title">
-                            Top 10 Points Scorers
-                            <a class="reset" href="javascript:topGuestsChart.filterAll();dc.redrawAll();">reset</a>
+                            Captains per Country over the past 5 seasons
+                            <a class="reset" href="javascript:captainChart.filterAll();dc.redrawAll();">reset</a>
                         </div>
                         <div class="chart-stage">
-                            <div id="squad-no-chart" data-step="6" data-intro="Shows the top ten guests. Click on the rows to filter the data" style="font-weight: normal" data-position="top"></div>
+                            <div id="captain-chart" data-step="6" data-intro="Shows the Captains per Country over the past 5 seasons. Click on the rows to filter the data" style="font-weight: normal" data-position="top"></div>
                         </div>
                     </div>
                 </div>
-                <!-- Top Guests Chart -->
+                <!-- Captains per Country over the past 5 seasons -->
 
                 <!-- Wins, Losses & Draws in the Past 5 Seasons -->
                 <div class="col-lg-6 col-md-6 col-sm-12">
@@ -195,7 +195,7 @@
                             Top Points Scorers over the past 5 seasons
                         </div>
                         <div class="chart-stage">
-                            <div id="top-guests-chart" data-step="8" data-intro="Shows how the Top Points Scorers over the past 5 seasons." style="font-weight: normal" data-position="top"></div>
+                            <div id="top-scorer-chart" data-step="8" data-intro="Shows how the Top Points Scorers over the past 5 seasons." style="font-weight: normal" data-position="top"></div>
                         </div>
                     </div>
                 </div>
@@ -206,12 +206,12 @@
             <div class="row">
 
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div id="guest-datatable"></div>
+                        <div id="topplayer-datatable"></div>
                 </div>
 
 
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div id="show-datatable"></div>
+                        <div id="tryscorer-datatable"></div>
 
                 </div>
                 
