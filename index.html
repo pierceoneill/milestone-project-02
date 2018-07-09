@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Six Nations</title>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+    
+    
+   
+    <link rel="stylesheet" href="ext_css/main.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="lib/css/dc.css">
+    <link rel="stylesheet" href="lib/css/introjs.css">
+    <script src="ext_js/Face-data.js"></script>
+    
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/crossfilter.js"></script>
+    <script src="lib/js/d3.js"></script>
+    <script src="lib/js/dc.js"></script>
+    <script src="lib/js/queue.js"></script>
+    <script src="lib/js/keen.min.js"></script>
+    <script src="lib/js/intro.js"></script>
+    
+</head>
+
+
+
+ <!-- Navigation -->
+ 
+<nav class="navbar navbar-expand-md sticky-top">
+<div class="container-fluid">
+	<a class="navbar-brand"  href="#"><img src="image/6Nations.png" alt="Logo" height="70" width="250"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse"
+	data-target="#navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link"  href="#"><img src="image/rfu.png" alt="Smiley face" height="100" width="100">England</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"  href="#"><img src="image/ffr.png" alt="Smiley face" height="100" width="100">France</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"  href="#"><img src="image/irfu.png" alt="Smiley face" height="100" width="100">Ireland</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"  href="#"><img src="image/fir.png" alt="Smiley face" height="100" width="100">Italy</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"  href="#"><img src="image/sru.png" alt="Smiley face" height="100" width="100">Scotland</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"  href="#"><img src="image/wru.png" alt="Smiley face" height="100" width="100">Wales</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</nav>
+
+<body class="back">
+
+    <div class="container-fluid">
+
+
+            <div>
+                <button class="intro_button" type="button" autofocus onclick="introJs().start();">Click to Start Tour!</button>
+            </div>
+
+            <div class="row">
+
+                <!-- year select -->
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Season
+                            <a class="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset All Charts</a>
+                        </div>
+                        <div class="chart-stage">
+                            <div id="year-select" data-step="1" data-intro="Select a year to filter the related data" style="font-weight: normal" data-position="top"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- year select -->
+
+                <!-- team select -->
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Team
+                            <a class="reset" href="javascript:selectTeam.filterAll();dc.redrawAll();">reset</a>
+                        </div>
+                        <div class="chart-stage">
+                            <div id="team-select" data-step="2" data-intro="Select the team" style="font-weight: normal" data-position="top"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- team select -->
+
+                <!-- displays the no of teams selected -->
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            No of Teams Selected
+                        </div>
+                        <div class="chart-stage">
+                            <div id="number-teams-nd" data-step="3" data-intro="Displays the total number of teams selected" style="font-weight: normal" data-position="top"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- displays the no of teams selected  -->
+
+            </div>
+
+            <div class="row">
+
+                <!-- Tries Scored Per Team Pie -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Tries Per Team
+                            <a class="reset" href="javascript:triesPerTeamChart.filterAll();dc.redrawAll();">reset</a>
+                        </div>
+                        <div class="chart-stage">
+                            <div id="tries-per-team-chart" data-step="4" data-intro="Shows the number of tries per team. Click on the slices to filter the data." style="font-weight: normal" data-position="top"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tries Scored Per Team Pie -->
+
+                <!-- Table Finishing Positions -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Table Finishing Positions
+                            <a class="reset" href="javascript:compositeChart.filterAll();dc.redrawAll();">reset</a>
+                        </div>
+                        <div class="chart-stage">
+                            <div id="chart-here" data-step="5" data-intro="Shows the finishing table positions. Click on the lines to filter the data." style="font-weight: normal" data-position="top"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Table Finishing Positions -->
+
+            </div>
+
+            <div class="row">
+
+                <!-- Top Guests Chart -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Top 10 Points Scorers
+                            <a class="reset" href="javascript:topGuestsChart.filterAll();dc.redrawAll();">reset</a>
+                        </div>
+                        <div class="chart-stage">
+                            <div id="squad-no-chart" data-step="6" data-intro="Shows the top ten guests. Click on the rows to filter the data" style="font-weight: normal" data-position="top"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Top Guests Chart -->
+
+                <!-- Guests By Year Chart -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Wins, Losses & Draws in the Past 5 Seasons
+                            <a class="reset" href="javascript:guestsByYearChart.filterAll();dc.redrawAll();">reset</a>
+                        </div>
+                        <div class="chart-stage">
+                            <div id="guests-by-year-chart" data-step="7" data-intro="Displays the number of guests. Click on the orange area and drag the mouse to choose a section and filter the data." style="font-weight: normal" data-position="top"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Guests By Year Chart -->
+
+            </div>
+
+            <div class="row">
+
+                <!-- Acting, Media, Politician series chart -->
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            The 3 top occupational groups
+                        </div>
+                        <div class="chart-stage">
+                            <div id="top-guests-chart" data-step="8" data-intro="Shows how the top 3 occupation groups have changed over the years. This chart is only for information purposes, does not interact with the other charts." style="font-weight: normal" data-position="top"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Acting, Media, Politician series chart -->
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div id="guest-datatable"></div>
+                </div>
+
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div id="show-datatable"></div>
+
+                </div>
+                
+
+            </div>
+        
+        
+        
+    
+<!-- Footer -->
+
+      <!-- Social buttons -->
+    
+    </div>
+    <!-- Footer Elements -->
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Place sticky footer content here.</span>
+      </div>
+    </footer>
+  <!-- Footer -->
+        <!-- Javascript files -->
+    
+<script src="ext_js/Face-data.js"></script>
+
+</body>  
+
+</html>

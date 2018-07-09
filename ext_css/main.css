@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 1px;
+}
+
+.back {
+  background-color: #fafafa;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#page {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#text-container {
+    text-align: center;
+    font-family: "Josefin Sans";
+    color: white;
+    padding: 60px 30px;
+    line-height: 1.8;
+    background-color: #001749;
+}
+
+.btn > a:hover {
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+button.intro_button {
+    background-color: #F9CB40;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: black;
+    width: 100%;
+}
+
+.dc-select-menu,
+.number-display {
+    font-size: 25px;
+}
+
+a.reset {
+    float: right;
+}
+
+td.dc-table-label {
+    display: none;
+}
+
+td, th {
+    padding: 10px;
+}
+
+.dc-chart g.row text {
+    fill: black;
+}
+
+
+div#guest-datatable.dc-chart,
+div#show-datatable.dc-chart {
+    background-color: white;
+    max-height: 300px;
+    overflow: auto;
+    margin-bottom: 30px;
+}
+
+.navbar {
+  padding: .8rem;
+  background-color: #2F2963;
+  color: white;
+}
+
+.navbar-nav li {
+  padding-right: 20px;
+}
+.nav-link {
+  font-size: 1.1em !important;
+  color: white;
+}
+.chart-wrapper {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.chart-wrapper .chart-title {
+  border-bottom: 1px solid #d7d7d7;
+  color: #666;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 7px 10px 4px;
+}
+
+.chart-wrapper .chart-stage {
+  /*min-height: 240px;*/
+  overflow: hidden;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.chart-wrapper .chart-notes {
+  background: #003982;
+  border-top: 1px solid #e2e2e2;
+  color: #808080;
+  font-size: 12px;
+  padding: 8px 10px 5px;
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #454372;
+}
+
+  
+
