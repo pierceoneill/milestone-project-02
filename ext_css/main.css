@@ -67,8 +67,8 @@ td, th {
 }
 
 
-div#guest-datatable.dc-chart,
-div#show-datatable.dc-chart {
+div#topplayer-datatable.dc-chart,
+div#tryscorer-datatable.dc-chart {
     background-color: white;
     max-height: 300px;
     overflow: auto;
