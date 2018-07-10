@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
     
     
-   
+    <link rel="icon" type="image/png" href="image/favicon.png" sizes="32x32" ixnations.png">
     <link rel="stylesheet" href="ext_css/main.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -43,6 +43,7 @@
 	data-target="#navbarResponsive">
 		<span class="navbar-toggler-icon"></span>
 	</button>
+	
 	<div class="collapse navbar-collapse" id="navbarResponsive">
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item">
@@ -129,10 +130,10 @@
                     <div class="chart-wrapper">
                         <div class="chart-title">
                             Tries Per Team
-                            <a class="reset" href="javascript:triesPerTeamChart.filterAll();dc.redrawAll();">reset</a>
+                            <a class="reset" href="javascript:topPlayerChart.filterAll();dc.redrawAll();">reset</a>
                         </div>
                         <div class="chart-stage">
-                            <div id="tries-per-team-chart" data-step="4" data-intro="Shows the number of tries per team. Click on the slices to filter the data." style="font-weight: normal" data-position="top"></div>
+                            <div id="topplayer-chart" data-step="4" data-intro="Shows tope player per team. Click on the slices to filter the data." style="font-weight: normal" data-position="top"></div>
                         </div>
                     </div>
                 </div>
@@ -146,7 +147,7 @@
                             <a class="reset" href="javascript:compositeChart.filterAll();dc.redrawAll();">reset</a>
                         </div>
                         <div class="chart-stage">
-                            <div id="chart-here" data-step="5" data-intro="Shows the finishing table positions. Click on the lines to filter the data." style="font-weight: normal" data-position="top"></div>
+                            <div id="chart-here" align-self: center; data-step="5" data-intro="Shows the finishing table positions. Click on the lines to filter the data." style="font-weight: normal" data-position="top"></div>
                         </div>
                     </div>
                 </div>
@@ -157,6 +158,7 @@
             <div class="row">
 
                 <!-- Captains per Country over the past 5 seasons -->
+                
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="chart-wrapper">
                         <div class="chart-title">
@@ -171,6 +173,7 @@
                 <!-- Captains per Country over the past 5 seasons -->
 
                 <!-- Wins, Losses & Draws in the Past 5 Seasons -->
+                
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="chart-wrapper">
                         <div class="chart-title">
@@ -195,47 +198,64 @@
                             Top Points Scorers over the past 5 seasons
                         </div>
                         <div class="chart-stage">
-                            <div id="top-scorer-chart" data-step="8" data-intro="Shows how the Top Points Scorers over the past 5 seasons." style="font-weight: normal" data-position="top"></div>
+                            <div id="top-scorer-chart" data-step="8" data-intro="Shows the Top Points Scorers over the past 5 seasons." style="font-weight: normal" data-position="top"></div>
                         </div>
                     </div>
                 </div>
                 <!-- Top Points Scorers over the past 5 seasons -->
 
             </div>
-
-            <div class="row">
-
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div id="topplayer-datatable"></div>
-                </div>
-
-
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div id="tryscorer-datatable"></div>
-
-                </div>
-                
-
+            
+            
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                  <div class="chart-wrapper">
+                        <div class="chart-title"> 
+                            Grand Slams over the Past 5 Seasons
+                        </div>
+                    <div class="chart-stage">
+                          <div id="grand-slam-chart" data-step="9" data-intro="Grand Slams or winning all 5 matches per season. Select team to view squad sizes per year." style="font-weight: normal" data-position="top"></div>
+                    </div>
+                  </div>
             </div>
-        
-        
-        
-    
-<!-- Footer -->
+            
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                  <div class="chart-wrapper">
+                        <div class="chart-title"> 
+                            Triple Crowns over the Past 5 Seasons
+                        </div>
+                    <div class="chart-stage">
+                          <div id="triple-crown-chart" data-step="10" data-intro="Triple Crowns per season. Select team to view squad sizes per year." style="font-weight: normal" data-position="top"></div>
+                    </div>
+                  </div>
+            </div>
+            
 
-      <!-- Social buttons -->
-    
-    </div>
-    <!-- Footer Elements -->
-    <footer class="footer">
-      <div class="container">
-        <span class="text-muted">Place sticky footer content here.</span>
-      </div>
-    </footer>
-  <!-- Footer -->
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                  <div class="chart-wrapper">
+                        <div class="chart-title"> 
+                            Squad Sizes Per Team
+                        </div>
+                    <div class="chart-stage">
+                          <div id="squad-chart" data-step="11" data-intro="Squad Sizes Per Team Chart. Select team to view squad sizes per year." style="font-weight: normal" data-position="top"></div>
+                    </div>
+                  </div>
+            </div>
+            
+            
+        </div>
+            
+<footer>
+    <div class="footer">Pierce O'Neill &copy; 2018  <a href="https://github.com/pierceoneill/milestone-project-02">
+        <img class="icons" sid="github" src="image/githublogowhite.png" height="32px"/></a></div>
+</footer>
+
+
+
+
         <!-- Javascript files -->
     
-<script src="ext_js/Face-data.js"></script>
+
 
 </body>  
 

@@ -183,12 +183,7 @@ function makeGraphs(error, rugby_data) {
        .slicesCap(6)
        .dimension(triesDim)
        .group(triesGroup)
-       .legend(dc.legend().x(380).y(5).itemHeight(13).gap(5))
-       .colorAccessor(function(d) {
-            return (d.key[0]);
-        })
-
-        .colors(function(d) { return namecolor(d); });
+       .legend(dc.legend().x(380).y(5).itemHeight(13).gap(5));
 
 
    specificOccupationChart
@@ -263,12 +258,12 @@ function makeGraphs(error, rugby_data) {
        
     squadChart
         .height(220)
+        .width(350)
        .radius(90)
        .innerRadius(40)
        .transitionDuration(1500)
        .dimension(squadDim)
-       .group(squadGroup)
-       .legend(dc.legend().x(280).y(5).itemHeight(13).gap(5));
+       .group(squadGroup);
        
     grandSlamChart
        .height(220)
@@ -279,6 +274,7 @@ function makeGraphs(error, rugby_data) {
        .group(grandSlamGroup);
        
     tripleCrownChart
+       .width(350)
        .height(220)
        .radius(90)
        .innerRadius(40)
@@ -287,8 +283,9 @@ function makeGraphs(error, rugby_data) {
        .group(tripleCrownGroup);
        
     topPlayerChart
-       .height(220)
-       .radius(90)
+       .width(750)
+       .height(350)
+       .radius(150)
        .innerRadius(40)
        .transitionDuration(1500)
        .dimension(topPlayerDim)
