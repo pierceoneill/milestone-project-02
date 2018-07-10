@@ -1,5 +1,5 @@
 queue()
-   .defer(d3.csv, "/Data/sixnations.csv")
+   .defer(d3.csv, "Data/sixnations.csv")
    .await(makeGraphs);
 
 function makeGraphs(error, rugby_data){
