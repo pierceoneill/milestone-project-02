@@ -2,7 +2,7 @@ queue()
    .defer(d3.csv, "/Data/sixnations.csv")
    .await(makeGraphs);
 
-function makeGraphs(error, rugby_data) {
+function makeGraphs(error, rugby_data){
 
    //Create a Crossfilter instance
    var ndx = crossfilter(rugby_data);
