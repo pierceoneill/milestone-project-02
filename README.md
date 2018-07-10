@@ -1,6 +1,12 @@
 # milestone-project-02
 Milestone Project 02 Data Visualisation
 
+# Project Brief
+CREATE A DATA DASHBOARD
+Build a data dashboard that visualizes a dataset of your choice
+Your data can be stored locally (e.g., in a js file) or sourced from an API
+Visualise your data using D3.js and dc.js
+
 # Description
 This is my second project created in Code Institute Diploma in Full Stack Development. This is reponsive data dashboard displaying data for the Six Nations rugby championship for the past 5 seasons. You can select either a season or a team to display the relevant data on screen.
 Data for this project i used from the Rugby Six Nations official website (https://www.sixnationsrugby.com) The full database was downloaded as csv file.
@@ -49,7 +55,13 @@ A 3rd party introjs.css styles the popup boxes for the charts. DC.css styles the
 3 Testing cross-filtering
 4 Validating buttons and filters
 
+# Acknowledgements
+My Mentor Chris Zielinski
 
-### Hosting
-Heroku is used to host this app. The requirements.txt contains all the packages required to run the app. Procfiles tell Heroku how to run the app. The app was deployed to Heroku over git. The server used for hosting is mLab MongoDB.
+# Resources
+Stackoverflow
+Github
+Slack
+Bootstrap
+
 
